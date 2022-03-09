@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.container {
+    background: #fff8e8;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+
+    header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .img-profile {
+            width: 120px;
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+            .socials {
+                font-weight: 300;
+                font-size: 0.85em;
+            }
+        }
+    }
+    main {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        ul {
+            padding: 0;
+            li {
+                margin: 1rem 0;
+                padding: 0;
+                list-style: none;
+                border: 1px solid #092042;
+                width: 300px;
+                padding: 0.6rem;
+                transition: 0.2s ease-in-out;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-radius: 7px;
+                cursor: pointer;
+
+                img {
+                    width: 25px;
+                    height: 25px;
+                }
+
+                &:hover {
+                    background: #092042;
+                    color: white;
+
+                    img {
+                        filter: invert(100%) sepia(18%) saturate(0%) hue-rotate(340deg) brightness(103%) contrast(103%);
+                    }
+                }
+            }
+        }
+    }
+
+    .waves {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        .imgs-waves {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .wave-bottom {
+                position: absolute;
+                bottom: 0;
+            }
+            .wave-top {
+                transform: rotate(180deg);
+                position: absolute;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .waves {
+        .imgs-waves {
+            .wave-bottom {
+                bottom: -7% !important;
+            }
+            .wave-top {
+                top: -15% !important;
+            }
+        }
+    }
+}
+@media screen and (max-width: 300px) {
+    main {
+        ul {
+            padding: 0;
+            .link-button {
+                flex: 0 1 300px;
+            }
+        }
+    }
+}

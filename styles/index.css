@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  background: #fff8e8;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.container header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container header .img-profile {
+  width: 120px;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.5rem;
+}
+
+.container header .img-profile img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.container header .img-profile .socials {
+  font-weight: 300;
+  font-size: 0.85em;
+}
+
+.container main {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 9999;
+}
+
+.container main ul {
+  padding: 0;
+}
+
+.container main ul li {
+  margin: 1rem 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid #092042;
+  width: 300px;
+  padding: 0.6rem;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.container main ul li img {
+  width: 25px;
+  height: 25px;
+}
+
+.container main ul li:hover {
+  background: #092042;
+  color: white;
+}
+
+.container main ul li:hover img {
+  -webkit-filter: invert(100%) sepia(18%) saturate(0%) hue-rotate(340deg) brightness(103%) contrast(103%);
+          filter: invert(100%) sepia(18%) saturate(0%) hue-rotate(340deg) brightness(103%) contrast(103%);
+}
+
+.container .waves {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container .waves .imgs-waves {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.container .waves .imgs-waves img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container .waves .imgs-waves .wave-bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+.container .waves .imgs-waves .wave-top {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  position: absolute;
+}
+
+@media screen and (min-width: 700px) {
+  .waves .imgs-waves .wave-bottom {
+    bottom: -7% !important;
+  }
+  .waves .imgs-waves .wave-top {
+    top: -15% !important;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  main ul {
+    padding: 0;
+  }
+  main ul .link-button {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 300px;
+            flex: 0 1 300px;
+  }
+}
+/*# sourceMappingURL=index.css.map */
