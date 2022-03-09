@@ -30,6 +30,7 @@
 }
 
 .container header {
+  z-index: 9999;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -73,7 +74,7 @@
 }
 
 .container main {
-  width: 100%;
+  width: 70vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,16 +87,33 @@
   z-index: 9999;
 }
 
-.container main ul {
-  padding: 0;
+.container main .links {
+  width: 100%;
 }
 
-.container main ul li {
+.container main .links ul {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container main .links ul li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50px;
+          flex: 0 0 50px;
   margin: 1rem 0;
   padding: 0;
   list-style: none;
   border: 1px solid #092042;
-  width: 300px;
+  width: 100%;
   padding: 0.6rem;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
@@ -112,17 +130,17 @@
   cursor: pointer;
 }
 
-.container main ul li img {
+.container main .links ul li img {
   width: 25px;
   height: 25px;
 }
 
-.container main ul li:hover {
+.container main .links ul li:hover {
   background: #092042;
   color: white;
 }
 
-.container main ul li:hover img {
+.container main .links ul li:hover img {
   -webkit-filter: invert(100%) sepia(18%) saturate(0%) hue-rotate(340deg) brightness(103%) contrast(103%);
           filter: invert(100%) sepia(18%) saturate(0%) hue-rotate(340deg) brightness(103%) contrast(103%);
 }
